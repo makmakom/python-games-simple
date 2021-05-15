@@ -17,8 +17,7 @@ print(
 guess = int()
 for guessesCount in range(6):
     print('Try guess')
-    guess = input()
-    guess = int(guess)
+    guess = int(input())
 
     if guess < number:
         print('Your number is to little.')
