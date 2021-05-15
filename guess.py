@@ -9,7 +9,10 @@ fromNumber = 1
 toNumber = 20
 number = random.randint(fromNumber, toNumber)
 
-print('So, '+userName+', I conceived a number from '+str(fromNumber)+' to '+str(toNumber)+', and you should guess ;P')
+print(
+    'So, ', userName, ', I conceived a number from ', str(fromNumber),
+    ' to ', str(toNumber), ', and you should guess ;P', sep=''
+      )
 
 guess = int()
 for guessesCount in range(6):
@@ -27,9 +30,7 @@ for guessesCount in range(6):
         break
 
 if guess == number:
-    guessesCount = str(guessesCount + 1)
-    print('Exelent, '+userName+ '! You\'r done by '+guessesCount+' tries!')
+    print('Excellent, ', userName, '! You\'r done by ', str(guessesCount + 1), ' tries!', sep='')
 
 if guess != number:
-    number = str(number)
-    print('Sorry, I conceived the number '+number+'.')
+    print('Sorry, I conceived the number ', str(number), '.', sep='')
